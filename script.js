@@ -17,7 +17,7 @@ const winPatterns = [
     [6, 7, 8],
 ]
 
-const resetGame = () =>{
+const resetGame = () => {
     turnO = true;
     enableBoxes();
     msgContainer.classList.add("hide");
@@ -70,8 +70,11 @@ const checkwinner = () => {
             if(pos1Valu === pos2Valu && pos2Valu === pos3Valu){
                 console.log("winner", pos1Valu);
                 showWinner(pos1Valu);
-                return;
+                // return;
             }
         }
     }
 }
+
+newGameBtn.addEventListener("click", resetGame);
+resetBtn.addEventListener("click", resetGame);
